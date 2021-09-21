@@ -14,8 +14,6 @@ public class Educational_114_A_RBS {
             for (int i = 0; i < n; i++) {
                 System.out.println(jhaat.get(i));
             }
-
-
         }
     }
 
