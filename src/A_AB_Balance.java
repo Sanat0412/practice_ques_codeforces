@@ -5,24 +5,19 @@ public class A_AB_Balance{
         int t=sc.nextInt();
         while(t-->0){
             int n=sc.nextInt();
-            long[] arr=new long[n];
-            int count=0;
-            long sum=0;
-            boolean ans=true;
+            int[] arr=new int[n];
             for(int i=0;i<n;i++){
-                arr[i]=sc.nextLong();
-                count+=i;
-                sum+=arr[i];
-
-                if(sum<count){
-                    ans=false;
-
-                }  }
-            if(ans){
-                System.out.println("YES");
-            } else{
-                System.out.println("NO");
+                arr[i]=sc.nextInt();
             }
+            Arrays.sort(arr);
+            int min=arr[0];
+            int count=0;
+            for(int i=0;i<n;i++){
+                if(arr[i]>min){
+                    count++;
+                }
+            }
+            System.out.println(count);
         }
     }
 }
